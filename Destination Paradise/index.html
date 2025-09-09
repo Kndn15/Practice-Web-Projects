@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destination Paradise</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg container-fluid"
+      style="background-color: #f5c2dc"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand"
+          ><b><i>Destination Paradise</i></b></a
+        >
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              data-bs-toggle="dropdown"
+              href="#"
+              role="button"
+              aria-expanded="false"
+              >Destinations</a
+            >
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Beach Getaway</a></li>
+              <li><a class="dropdown-item" href="#">Mountain Adventure</a></li>
+              <li>
+                <a class="dropdown-item" href="#">City Life Experience</a>
+              </li>
+              <li><a class="dropdown-item" href="#">More</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about" id="aboutLink">About</a>
+          </li>
+        </ul>
+
+        <form class="d-flex" role="search">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+            id="searchInput"
+          />
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div
+        id="carouselExampleInterval"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleInterval"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleInterval"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleInterval"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleInterval"
+            data-bs-slide-to="3"
+            aria-label="Slide 4"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleInterval"
+            data-bs-slide-to="4"
+            aria-label="Slide 5"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./images/Image1.png" class="d-block w-100" />
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="./images/Image2.png" class="d-block w-100" />
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="./images/Image3.png" class="d-block w-100" />
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="./images/Image4.png" class="d-block w-100" />
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="./images/Image5.png" class="d-block w-100" />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev previous-slide"
+          type="button"
+          data-bs-target="#carouselExampleInterval"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next next-slide"
+          type="button"
+          data-bs-target="#carouselExampleInterval"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <div class="home" id="home">
+        <div class="home-form-section">
+          <h2 class="form-title">Book Your Dream Vacation</h2>
+          <br />
+          <form id="bookingForm">
+            <label for="name"><strong>Name</strong></label
+            ><br />
+            <input type="text" id="name" required /><br /><br />
+            <label for="email"><strong>Email</strong></label
+            ><br />
+            <input type="email" id="email" required /><br /><br />
+            <label for="countryCode"><strong>Country Code</strong></label
+            ><br />
+            <select class="form-select" id="countryCode" required></select
+            ><br />
+            <label for="phone"><strong>Phone</strong></label
+            ><br />
+            <input type="number" id="phone" required /><br /><br />
+            <label for="birthday"><strong>Birthday</strong></label
+            ><br />
+            <input type="date" id="birthday" required /><br /><br />
+            <label for="maritalStatus"><strong>Marital status</strong></label
+            ><br />
+            <select class="form-select" id="maritalStatus" required>
+              <option name="maritalStatus" value="single">Single</option>
+              <option name="maritalStatus" value="married">
+                Married
+              </option></select
+            ><br />
+
+            <button type="submit">Submit</button>
+            <div id="formSuccessMessage"></div>
+          </form>
+        </div>
+
+        <div class="home-packages-section">
+          <h2 class="section-title">Explore Our Travel Packages</h2>
+          <div class="packages-container" id="packages-container"></div>
+        </div>
+      </div>
+      <div class="about-container" id="about">
+        <h2>About Us</h2>
+        <div class="about-content">
+          <div class="about-img">
+            <img src="./images/image.png" alt="" />
+          </div>
+          <div class="about-text">
+            <h3>Welcome to Destination Paradise</h3>
+            <p>
+              Your ultimate guide to unwinding in the most beautiful
+              destinations around the world. From secluded beaches to bustling
+              cities, we curate the best travel experiences tailored just for
+              you.
+            </p>
+            <button class="learn-more-btn">Learn More</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
